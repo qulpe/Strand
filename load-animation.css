@@ -1,0 +1,23 @@
+#load-container{
+    width: 0;  
+    height: 0;
+    animation: 2s loader;
+    z-index: 99999999999999999999;
+    position: absolute;
+    overflow: hidden;
+}
+
+.loader-container{
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    place-items: center;
+    position: absolute;
+}
+
+@keyframes loader{
+    0%{width: 0; height: 0; background-color: aqua;}
+    25%{width: 25vw; height: 25vh; background-color: blueviolet;}
+    75%{width: 75vw; height: 75vh; background-color: chartreuse;}
+    100%{width: 100vw; height: 100vh; background-color:aquamarine}
+}

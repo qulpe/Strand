@@ -1,0 +1,121 @@
+/* HOME PAGE STYLESHEET */
+
+#hero {
+    height: auto;
+    width: auto;
+    position: absolute;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.one{
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(-90deg, transparent, #00000099);
+    left: -20px;
+}
+
+.two{
+    width: 50vw;
+    height: 100vh;
+    position: fixed;
+    background: linear-gradient(-90deg, #00000099, #00000000); /* maybe use box-shadow cause it looks like shit now */
+    right: -20px;
+}
+
+.container-junk {
+    width: 100vw;
+    height: fit-content;
+    background: url('http://localhost/stranddetektor/wp-content/uploads/2019/02/landscape-3650119-e1550833807759.jpg');
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.row-hero {
+    padding-top: 2.5vh;
+    height: 90vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.presentation{
+    width: 50vw;
+    height: 100%;
+    background: #fff;
+    position: relative;
+    display: grid;
+    place-items: center;
+}
+
+.row-1 {
+    padding-top: 2.5vh;
+    height: 80vh;
+    width: 100vw;
+    display: grid;
+    place-items: center;
+}
+
+.row-2{
+    width: 100vw;
+    height: 25vh;
+    background: #fff;
+    display: grid;
+    position: relative;
+    grid-template-columns: 1fr 1fr;
+    padding: 30px 10% 0 10%;
+}
+
+.title{
+    font-size: 42px;
+    padding: 5vh 0 0 10vw;
+}
+
+.download{
+    background-size: initial;
+    padding: 2.5vh 0 0 0;
+}
+
+.text {
+    height: 35vh;
+    width: 30vw;
+    padding: 10px;
+    white-space: wrap;
+    color: #000;
+    background: #fff;
+    position: absolute;
+    right: 20vw;
+    transform: translate(0, 17.5vh);
+} 
+
+.p-title{
+    font-size: 18px;
+}
+
+.image-phone{
+    width: 230px;
+    height: auto;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    left: 25vw;
+    transform: translate(0, 17.5vh);
+}
+
+@media (max-width: 767px){
+    .row-1{
+        height: fit-content;
+        display: grid;
+        place-items: center;
+        grid-template-columns: 1fr;
+        gap: 20px;
+        padding-bottom: 2.5vh;
+    }
+
+    .text, .image{
+        position: unset;
+        left: unset;
+        transform: none;
+    }
+}
