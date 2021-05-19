@@ -109,6 +109,24 @@ function register_sidebars_init()
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+    register_sidebar(array(
+        'name' => 'posts',
+        'id' => 'posts',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
+    register_sidebar(array(
+        'name' => 'contact form',
+        'id' => 'contact-form',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 }
 
 add_action("widgets_init", "register_sidebars_init");
@@ -122,3 +140,7 @@ add_action("widgets_init", "register_sidebars_init");
 //     $_SESSION['loadAnimation'] = NULL;
 // }
 
+function twentytwelve_setup() {
+    add_theme_support('post-thumbnails');
+    }
+  add_action( 'after_setup_theme', 'twentytwelve_setup' );
