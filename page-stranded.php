@@ -17,16 +17,6 @@ get_header();
                             } ?>
                             <h2 class="post-title"><?php the_title(); ?></h2>
                         </a>
-                        <div class="post-category">
-                            <?php the_category(', '); ?>
-                        </div>
-                     
-                        <span class="post-read-more">
-                            <a itemprop="url" href="<?php the_permalink(); ?>" target="_blank">
-                                <?php echo esc_html__('Read more', 'theme-domain') ?>
-                            </a>
-                        </span>
-                        
                     </article>
 
                 <?php endwhile; ?>
