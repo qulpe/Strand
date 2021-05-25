@@ -15,7 +15,7 @@ get_header(); ?>
 
             <header class="archive-header">
                 <h1 class="archive-title">Category: <?php single_cat_title('', false); ?></h1>
-
+             
 
                 <?php
                 // Display optional category description
@@ -29,14 +29,12 @@ get_header(); ?>
             // The Loop
             while (have_posts()) : the_post(); ?>
                 <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-
+                <?php if (has_post_thumbnail()) {
+                                the_post_thumbnail(get_the_ID(), 'full');
+                            } ?>
 
                 <div class="entry">
                     <?php the_content(); ?>
-
-                    <p class="postmetadata"><?php
-                                            comments_popup_link('No comments yet', '1 comment', '% comments', 'comments-link', 'Comments closed');
-                                            ?></p>
                 </div>
 
             <?php endwhile;

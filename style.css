@@ -19,13 +19,13 @@ a{
 /* Track */
 
 ::-webkit-scrollbar-track {
-  background: #ffffff00;
+  background: #f5f4f4;
 }
 
 /* Handle */
 
 ::-webkit-scrollbar-thumb {
-  background: #00000090;
+  background: #cae4db;
 }
 
 /* Handle on hover */
@@ -51,16 +51,21 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
+  background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/bbackground-white-oyster.png');   
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 #main{
   overflow: unset !important; 
-  padding: 90px 20% 0 20%;                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   px 0 0 0;
+  padding: 90px 20% 0 20%;
 }
 
 @media (max-width: 767px){
   #main{
-    padding: 0;
+    padding: 10% 10%;
   }
 }
 
@@ -77,7 +82,8 @@ nav.navigation-mobile {
   position: fixed;
   z-index: 999;
   right: 0px !important;
-  top: 7.5vh;
+  top: 10.5vh;
+  width: 10%;
 }
 
 @media (min-width: 767px){
@@ -226,11 +232,11 @@ nav.navigation-mobile {
 
 nav.navigation-desktop {
   width: 100vw;
-  height: 72px;
+  height: 62px;
   z-index: 999999999999999999;
   background: transparent;
   position: fixed;
-  background: #fff;
+  background: #f5f4f4;
 }
 
 @media (max-width: 767px){
@@ -264,6 +270,10 @@ nav.navigation-desktop {
   position: relative;
 }
 
+#menu-desktop-item a:hover{
+  color: #cdac81;
+}
+
 #menu-desktop-item:after {
   background: none repeat scroll 0 0 transparent;
   bottom: 0;
@@ -272,7 +282,7 @@ nav.navigation-desktop {
   height: 2px;
   left: 50%;
   position: absolute;
-  background: #000;
+  background: #cdac81;
   /* transition: width 0.3s ease 0s, left 0.3s ease 0s; */
   width: 10px;
 }
@@ -299,18 +309,19 @@ nav.navigation-desktop {
 
 #footer {
   height: fit-content;
-  width: 100vw;
+
   padding: 50px 20% 50px 20%;
-  background: grey;
-  color: #f6f5f5;
+  background: #00303f;
+  color: #cae4db;
   display: grid;
-  grid-template-columns: 0.1fr 1fr
+  grid-template-columns: 0.1fr 1fr;
+  z-index: 0;
 }
 
 .footer-container{
   display: flex;
   justify-content: flex-end;
-  padding-right: 45%;
+  padding-left: 45%;
   gap: 50px;
 }
 
@@ -318,6 +329,7 @@ nav.navigation-desktop {
   #footer{
     grid-template-columns: 1fr;
     gap: 0;
+    padding: 10%;
   }
   #footer-items-wrapper-logo aside{
     display: block !important;
@@ -325,6 +337,24 @@ nav.navigation-desktop {
   #footer-items-wrapper-logo{
     display: block !important;
   }
+  .footer-container{
+    justify-content: unset;
+    padding: 0 !important;
+  }
+  #footer-items-wrapper aside div p a {
+    justify-content: unset !important;
+  }
+  .safe{
+    display: unset !important;
+  }
+  .copyright{
+    padding: 10% !important;
+  }
+}
+
+.safe{
+  display: flex;
+  justify-content: flex-end;
 }
 
 #footer-items-wrapper aside ul{
@@ -334,7 +364,7 @@ nav.navigation-desktop {
 }
 
 #footer-items-wrapper aside ul li a{
- color: #fff;
+ color: #cae4db;
 }
 
 #footer-items-wrapper aside{
@@ -353,7 +383,6 @@ nav.navigation-desktop {
 
 #footer-items-wrapper-2{
   display: grid !important;
-  grid-template-rows: 1fr 1fr !important;
   gap: 20px !important;
 }
 
@@ -362,7 +391,7 @@ nav.navigation-desktop {
 }
 
 #footer-items-wrapper-2 aside div p a{
-  color: #fff;
+  color: #cae4db;
 }
 
 #footer-items-wrapper aside div p a{
@@ -388,12 +417,11 @@ nav.navigation-desktop {
 
 .copyright {
   height: fit-content;
-  width: 100vw;
   display: flex;
   justify-content: center;
-  padding: 20px 0;
+  padding: 20px 20%;
   background: #000;
-  color: #fff;
+  color: #cae4db;
 }
 
 .basic{
@@ -401,4 +429,25 @@ nav.navigation-desktop {
   width: 100vw;
   background: white;
   padding-top: 100px;
+}
+
+#toTop{
+  position: absolute;
+  right: calc(20% - 50px);
+  margin-top: -50px;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  font-size: 45px;
+  color: #00303f;
+}
+
+.square-animation{
+  animation: totop 750ms;
+}
+
+@keyframes totop{
+  0%{opacity: 0; margin-top: 0; }
+  100%{opacity: 1; margin-top: -50px; }
 }

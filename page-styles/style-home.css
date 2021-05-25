@@ -27,7 +27,7 @@
 .container-junk {
     width: 100vw;
     height: fit-content;
-    background: url('http://localhost/stranddetektor/wp-content/uploads/2019/02/landscape-3650119-e1550833807759.jpg');
+    background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/background-OYSTER-1.png');
     background-size: cover;
     background-attachment: fixed;
 }
@@ -118,4 +118,13 @@
         left: unset;
         transform: none;
     }
+}
+
+#phone{
+    height: 150px;
+    width: 75px;
+}
+
+#download-button{
+    width: 100px;
 }

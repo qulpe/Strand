@@ -1,9 +1,11 @@
+<?php get_template_part('templates/footer/to-top'); ?>
+
 <footer id="footer">
 
     <div id="footer-items-wrapper-logo">
         <?php dynamic_sidebar('footer-1'); ?>
     </div>
-
+<div class="safe">
     <div class="footer-container">
         <div id="footer-items-wrapper">
             <?php dynamic_sidebar('footer-2'); ?>
@@ -12,11 +14,12 @@
         <div id="footer-items-wrapper-2">
             <?php dynamic_sidebar('footer-3'); ?>
         </div>
-
+        </div>
         <div id="footer-items-wrapper">
             <?php dynamic_sidebar('footer-4'); ?>
         </div>
-    </div>
+        </div>
+  
 
 </footer>
 

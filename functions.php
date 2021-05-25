@@ -4,7 +4,7 @@
 function theme_enqueue_styles() {
     wp_enqueue_style( 'child-style', get_stylesheet_directory_uri() . '/style.css' );
     wp_enqueue_style( 'home', get_stylesheet_directory_uri() . '/page-styles/style-home.css' );
-    wp_enqueue_style( 'strande', get_stylesheet_directory_uri() . '/page-styles/style-strande.css' );
+    wp_enqueue_style( 'strande', get_stylesheet_directory_uri() . '/page-styles/style-stranded.css' );
     wp_enqueue_style( 'faq', get_stylesheet_directory_uri() . '/page-styles/style-faq.css' );
     wp_enqueue_style( 'kontakt', get_stylesheet_directory_uri() . '/page-styles/style-kontakt.css' );
     wp_enqueue_style( 'load-animation', get_stylesheet_directory_uri() . '/loading-animation/load-animation.css' );
