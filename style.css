@@ -31,7 +31,7 @@ a{
 /* Handle on hover */
 
 ::-webkit-scrollbar-thumb:hover {
-  background: #006A71;
+  background: #00303f;
 }
 
 .lang-item {
@@ -51,7 +51,8 @@ body {
   margin: 0;
   padding: 0;
   overflow-x: hidden;
-  background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/bbackground-white-oyster.png');   
+  background: #f5f4f4;
+  /* background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/bbackground-white-oyster.png');    */
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -60,12 +61,12 @@ body {
 
 #main{
   overflow: unset !important; 
-  padding: 90px 20% 0 20%;
+  padding: 0px 20% 0 20%;
 }
 
 @media (max-width: 767px){
   #main{
-    padding: 10% 10%;
+    padding: 0;
   }
 }
 
@@ -311,8 +312,8 @@ nav.navigation-desktop {
   height: fit-content;
 
   padding: 50px 20% 50px 20%;
-  background: #00303f;
-  color: #cae4db;
+  background: #cae4db;
+  color: #00303f;
   display: grid;
   grid-template-columns: 0.1fr 1fr;
   z-index: 0;
@@ -364,7 +365,7 @@ nav.navigation-desktop {
 }
 
 #footer-items-wrapper aside ul li a{
- color: #cae4db;
+ color: #00303f;
 }
 
 #footer-items-wrapper aside{
@@ -391,7 +392,7 @@ nav.navigation-desktop {
 }
 
 #footer-items-wrapper-2 aside div p a{
-  color: #cae4db;
+  color: #00303f;
 }
 
 #footer-items-wrapper aside div p a{
@@ -420,7 +421,7 @@ nav.navigation-desktop {
   display: flex;
   justify-content: center;
   padding: 20px 20%;
-  background: #000;
+  background: #00303f;
   color: #cae4db;
 }
 
@@ -440,7 +441,7 @@ nav.navigation-desktop {
   display: grid;
   place-items: center;
   font-size: 45px;
-  color: #00303f;
+  color: #cae4db;
 }
 
 .square-animation{
@@ -450,4 +451,8 @@ nav.navigation-desktop {
 @keyframes totop{
   0%{opacity: 0; margin-top: 0; }
   100%{opacity: 1; margin-top: -50px; }
+}
+
+.search-title{
+  padding: 29vh 0 0 0;
 }

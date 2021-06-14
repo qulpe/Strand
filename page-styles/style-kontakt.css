@@ -1,0 +1,57 @@
+#page-kontakt{
+    height: 100vh;
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    padding: 10% 0 0 0;
+}
+
+input[type="text"],input[type="email"],textarea{
+    padding: 10px 5px;
+    border: 0;
+    resize: none;
+    border-radius: 5px;
+}
+
+#contact-info{
+    padding-top: 5vh;
+    width: 50%;
+    height: fit-content;
+    position: absolute;
+
+}
+
+#contact-form{
+    background: #00000020;
+    display: flex;
+    height: fit-content;
+    width: 100vw;
+    margin-top: 30vh;
+    padding: 5%;
+}
+
+#contact-title{
+    display: grid;
+    place-items: center;
+    width: 50%;
+    height: 100%;
+}
+
+@media (max-width: 767px){
+    #page-kontakt{
+        grid-template-columns: 1fr !important;
+    }
+
+    input[type="text"],input[type="email"],textarea{
+        width: 70vw;
+    }
+ 
+}
+
+#kontakt{
+    width: 500px;
+    height: 500px; 
+    background: #000;
+    z-index: 999999999999999999999999999999999999;
+}

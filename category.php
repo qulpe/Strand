@@ -28,15 +28,15 @@ get_header(); ?>
 
             // The Loop
             while (have_posts()) : the_post(); ?>
-                <h2><a href="<?php the_permalink() ?>" rel="bookmark" title="Permanent Link to <?php the_title_attribute(); ?>"><?php the_title(); ?></a></h2>
-                <?php if (has_post_thumbnail()) {
+                <article id="post-<?php the_ID(); ?>" class="post-wrapper">
+                        <a href="<?php the_permalink(); ?>" class="post-link">
+                            <?php if (has_post_thumbnail()) {
                                 the_post_thumbnail(get_the_ID(), 'full');
                             } ?>
-
-                <div class="entry">
-                    <?php the_content(); ?>
-                </div>
-
+                            <h2 class="post-title"><?php the_title(); ?></h2>
+                        <p> <?php the_excerpt(); ?> </p>
+                        </a>
+                    </article>
             <?php endwhile;
 
         else : ?>

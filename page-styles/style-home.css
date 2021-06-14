@@ -1,130 +1,119 @@
 /* HOME PAGE STYLESHEET */
 
-#hero {
-    height: auto;
-    width: auto;
-    position: absolute;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.one{
-    width: 50vw;
-    height: 100vh;
-    position: fixed;
-    background: linear-gradient(-90deg, transparent, #00000099);
-    left: -20px;
-}
-
-.two{
-    width: 50vw;
-    height: 100vh;
-    position: fixed;
-    background: linear-gradient(-90deg, #00000099, #00000000); /* maybe use box-shadow cause it looks like shit now */
-    right: -20px;
-}
-
-.container-junk {
-    width: 100vw;
-    height: fit-content;
-    background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/background-OYSTER-1.png');
-    background-size: cover;
-    background-attachment: fixed;
-}
-
-.row-hero {
-    padding-top: 2.5vh;
-    height: 90vh;
-    width: 100vw;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-}
-
-.presentation{
-    width: 50vw;
-    height: 100%;
-    background: #fff;
-    position: relative;
-    display: grid;
-    place-items: center;
-}
-
-.row-1 {
-    padding-top: 2.5vh;
-    height: 80vh;
-    width: 100vw;
-    display: grid;
-    place-items: center;
-}
-
-.row-2{
-    width: 100vw;
-    height: 25vh;
-    background: #fff;
-    display: grid;
-    position: relative;
-    grid-template-columns: 1fr 1fr;
-    padding: 30px 10% 0 10%;
-}
-
-.title{
-    font-size: 42px;
-    padding: 5vh 0 0 10vw;
-}
-
 .download{
     background-size: initial;
     padding: 2.5vh 0 0 0;
 }
 
-.text {
-    height: 35vh;
-    width: 30vw;
-    padding: 10px;
-    white-space: wrap;
-    color: #000;
-    background: #fff;
-    position: absolute;
-    right: 20vw;
-    transform: translate(0, 17.5vh);
-} 
-
-.p-title{
-    font-size: 18px;
-}
-
-.image-phone{
-    width: 230px;
-    height: auto;
-    background-size: contain;
-    background-position: center;
-    position: absolute;
-    left: 25vw;
-    transform: translate(0, 17.5vh);
-}
-
-@media (max-width: 767px){
-    .row-1{
-        height: fit-content;
-        display: grid;
-        place-items: center;
-        grid-template-columns: 1fr;
-        gap: 20px;
-        padding-bottom: 2.5vh;
-    }
-
-    .text, .image{
-        position: unset;
-        left: unset;
-        transform: none;
-    }
-}
-
 #phone{
-    height: 150px;
-    width: 75px;
+    height: fit-content;
+    width: 250px;
+    margin-right: 150px;
+    margin-top: 20px;
 }
 
 #download-button{
     width: 100px;
+}
+
+#hero-container{
+    width: 60vw;
+    height: 70vh;
+    background: #f5f4f4;
+    display: flex;
+    margin-top: -600px;
+    z-index: 99;
+}
+
+#left-hero{
+    width: 50%;
+    height:100%;
+    overflow: hidden;
+
+}
+
+#phone-container{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+#small-announcement{
+    height: fit-content;
+    width: fit-content;
+    display: grid; 
+    place-items: center;
+    padding: 10% 15%;
+    background: #cae4db;
+    color: #00303f;
+}
+
+#last-text{
+    height: fit-content;
+    width: 95%;
+    padding: 10% 2%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    place-items: center;
+    background: #cae4db;
+    color: #00303f;
+    margin-bottom: 100px;
+}
+
+
+#trapezoid {
+    border-bottom: 75px solid #f5f4f4;
+    border-left: 20px solid transparent;
+    border-right: 20px solid transparent;
+    height: 0;
+    width: 60%;
+    margin-top: 25px;
+}
+
+#updated-hero{
+    height: 165vh;
+    width: 100vw;
+    position: relative;
+    left: -20vw;
+    background: linear-gradient(90deg, rgba(0,48,63,0.4822303921568627) 0%, rgba(0,48,63,0.4206057422969187) 50%, rgba(0,48,63,0.4598214285714286) 100%), url('http://localhost/stranddetektor/wp-content/uploads/2019/02/landscape-3650119-e1550833807759.jpg');   
+    z-index: -1;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  
+    
+}
+
+@media (max-width: 767px){
+    #updated-hero{
+        left: 0;
+    }
+}
+
+.cover{
+    background: #f5f4f4;
+    height: 600px;
+    width: 21vw;
+    margin-top: 100px;
+    z-index: 999;
+}
+
+#shape-container{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+#fqfq{
+    position: absolute;
+    display: grid;
+    place-items: center;
+    width: 100%;
+    height: 100vh;
+    color: #fff;
 }
