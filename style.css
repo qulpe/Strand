@@ -354,6 +354,10 @@ nav.navigation-desktop {
   list-style-type: none;
 }
 
+#desktop ul{
+  display: flex !important; 
+}
+
 #menu-desktop-item a{
   color: #000;
 }
