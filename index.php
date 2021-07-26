@@ -1,12 +1,16 @@
 <?php get_header();
 
-if (have_posts()) :
-    while (have_posts()) : the_post(); ?>
+if ( have_posts() ) {
 
-<?php endwhile;
-else :
-    echo ' <p>no content found</p>';
+	// Load posts loop.
+	while ( have_posts() ) {
+		the_post();
+	}
 
-endif;
+} else {
 
-get_footer(); ?>
+echo "no content found";
+
+}
+
+get_footer();

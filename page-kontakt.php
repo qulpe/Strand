@@ -2,7 +2,7 @@
 
 if (have_posts()) :
     while (have_posts()) : the_post(); ?>
-
+<li class="list-item">
         <div id="page-kontakt">
 
             <div id="contact-form">
@@ -12,7 +12,7 @@ if (have_posts()) :
                     <p> <?php the_field('reply'); ?></p>
                 </div>
             </div>
-            <div id="kontakt"></div>
+            
             <div id="contact-info">
                 <h1>Kontaktinformationer</h1>
                <p> <?php the_field('address'); ?></p>
@@ -22,7 +22,7 @@ if (have_posts()) :
             </div>
 
         </div>
-
+</li>
 <?php endwhile;
 else :
     echo ' <p>no content found</p>';

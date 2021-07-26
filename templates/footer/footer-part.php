@@ -1,3 +1,4 @@
+<li class="list-item-footer">
 <?php get_template_part('templates/footer/to-top'); ?>
 
 <footer id="footer">
@@ -24,3 +25,4 @@
 </footer>
 
 <div class="copyright">© Copyright 2019 Stranddetektor.dk | Alle rettigheder forbeholdes | Udviklet af Grumsen Development ApS</div>
+</li>

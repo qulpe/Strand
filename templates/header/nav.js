@@ -7,14 +7,14 @@ let toggle = false;
 function displayMenu() {
     if (!toggle) {
         displayerMenu.setAttribute('class', 'show')
-        document.querySelector('.trig').setAttribute('class', 'first')
-        document.querySelector('.trigon').setAttribute('class', 'second')
-        document.querySelector('.trigor').setAttribute('class', 'third')
+        document.querySelector('#trig').setAttribute('class', 'first')
+        document.querySelector('#trigon').setAttribute('class', 'second')
+        document.querySelector('#trigor').setAttribute('class', 'third')
     } else {
         displayerMenu.setAttribute('class', 'unshow')
-        document.querySelector('.trig').removeAttribute('class')
-        document.querySelector('.trigon').removeAttribute('class')
-        document.querySelector('.trigor').removeAttribute('class')
+        document.querySelector('#trig').classList.remove('first')
+        document.querySelector('#trigon').classList.remove('second')
+        document.querySelector('#trigor').classList.remove('third')
     }
     toggle = !toggle;
 }
@@ -24,4 +24,5 @@ displayerMenu.addEventListener('click', function() {
         displayMenu,
         false
     )
+    
 });

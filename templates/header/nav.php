@@ -24,9 +24,9 @@
 
 <nav class="navigation-mobile">
     <div class="trigger" onclick="displayMenu()">
-        <span class="trig"></span>
-        <span class="trigon"></span>
-        <span class="trigor"></span>
+        <span id="trig"></span>
+        <span id="trigon"></span>
+        <span id="trigor"></span>
     </div>
 </nav>
 
@@ -44,7 +44,7 @@
             )
         );
         ?>
-
+       
     </ul>
 
 </div>

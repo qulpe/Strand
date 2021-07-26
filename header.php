@@ -13,7 +13,8 @@
 
 <body>
 
-<?php get_template_part('templates/header/nav') ?>
+    <?php get_template_part('templates/header/nav') ?>
 
-    <main id="main" class="clearfix <?php echo esc_attr($main_class); ?>">
-        <div class="fusion-row" style="<?php echo esc_attr($row_css); ?>">
+    <div class="wrapper">
+        <div class="container">
+            <ul id="list-container">

@@ -2,15 +2,39 @@
 Theme Name: asdfgboigdfh
 */
 @import url('https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
 
 a{
-  text-decoration: none;
+  text-decoration: none !important;
+  color: #000 !important;
+  font-family: 'Josefin Sans', sans-serif !important;
 }
 
-*{
-  /* font-family: 'Itim', cursive; */
-  font-family: 'Josefin Sans', sans-serif;
+p, h1, h2, h3, h4{
+  text-align: start !important;
 }
+
+h1, h2, h3, h4{
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+p{
+  font-size: 18px !important;
+  font-family: 'Roboto', sans-serif !important;
+}
+
+h1{
+  font-size: 44px !important;
+}
+
+h2{
+  font-size: 32px !important;
+}
+
+li{
+  list-style-type: none !important;
+}
+
 
 ::-webkit-scrollbar {
   width: 7px;
@@ -50,7 +74,7 @@ a{
 body {
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
+  overflow: hidden;
   background: #f5f4f4;
   /* background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/bbackground-white-oyster.png');    */
   background-attachment: fixed;
@@ -59,16 +83,93 @@ body {
   background-size: cover;
 }
 
-#main{
-  overflow: unset !important; 
-  padding: 0px 20% 0 20%;
+  
+.wrapper {
+  display: flex;
+}
+
+/* h2 {
+  text-align: center;
+  font-size: 1.5rem;
+  font-family: monospace;
+  width: 50%;
+  top: 1em;
+} */
+
+.container {
+  width: 100%;
+  max-height: 100vh;
+  overflow-x: hidden;
+  scroll-snap-type: y mandatory;
+  -webkit-scroll-snap-type: y mandatory;
+  margin: 0 !important;
+  padding: 0 !important;
+  background: url('http://localhost/stranddetektor/wp-content/uploads/2021/05/bbackground-white-oyster.png');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 @media (max-width: 767px){
-  #main{
-    padding: 0;
+  .list-item{
+    padding: 0 10% !important;
   }
 }
+
+ul#list-container{
+  padding: 0;
+  width: 100vw;
+  height: 100vh;
+}
+
+.list-item {
+  height: 100vh;
+  color: rgba(white, .5);
+  scroll-snap-align: start !important;
+  -webkit-scroll-snap-align: start !important;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  place-items: center;
+  margin: 0;
+  padding: 0 20%;
+  overflow: hidden;
+}
+
+/* .container::-webkit-scrollbar {
+  display: none;
+} */
+
+body::-webkit-scrollbar {
+  display: none;
+}
+
+.list-item-footer {
+  height: 100vh;
+  font-size: 1.4rem;
+  color: rgba(white, .5);
+  text-align: center;
+  scroll-snap-align: end !important;
+  -webkit-scroll-snap-align: end !important;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0;
+}
+/* 
+article.post-wrapper{
+  height: 100vh;
+  font-size: 1.4rem;
+  color: rgba(white, .5);
+  background: lightgray;
+  text-align: center;
+  scroll-snap-align: start;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin: 0;
+} */
 
 #pagination {
   width: 100vw !important;
@@ -97,7 +198,7 @@ nav.navigation-mobile {
   width: 40px;
   height: 32px;
   padding: 5px 5px 0px 5px;
-  background: red;
+  background: #f5f4f4;
   display: grid;
   grid-template-columns: 1fr;
   place-items: center;
@@ -110,7 +211,7 @@ nav.navigation-mobile {
   height: 4px;
   margin-bottom: 5px;
   position: relative;
-  background: #fff;
+  background: #000;
   border-radius: 3px;
   z-index: 999;
   transform-origin: 4px 0px;
@@ -127,7 +228,7 @@ nav.navigation-mobile {
 
 .first {
   opacity: 1;
-  background: #ffffff;
+  background: #f5f4f4;
   animation: 1s first;
   transform: rotate(45deg) translate(-2px, -1px);
 }
@@ -158,7 +259,7 @@ nav.navigation-mobile {
 }
 
 .second {
-  animation: 1s second;
+  animation: 0.5s second;
   opacity: 0;
 }
 
@@ -176,24 +277,20 @@ nav.navigation-mobile {
   width: 100vw;
   height: 100vh;
   z-index: 11;
-  display: grid;
+  padding: 20% 0 0 0;
   place-items: center;
-  background: red;
+  background: #f5f4f4;
   color: #000;
   animation: show 0.7s;
-  list-style-type: none;
   position: absolute;
   transform: scaleX(1) scaleY(1);
+  font-size: 18px !important;
 }
 
-.menu-container {
-  display: grid;
-  place-items: center;
-  position: relative;
-  top: 10vh;
-  right: 7vw;
-  font-size: 26px;
-  animation: 0.8s text;
+#menu-container li a{
+  color: #000 !important;
+  padding: 5px;
+  text-transform: uppercase !important;
 }
 
 @keyframes text {
