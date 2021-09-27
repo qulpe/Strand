@@ -26,3 +26,22 @@ displayerMenu.addEventListener('click', function() {
     )
     
 });
+
+
+const current = document.querySelector('#kategori');
+
+
+document.querySelector('.sub-menu').setAttribute('id', 'mobile-dropdown-cat')
+
+current.addEventListener('click', function(){
+    if(!toggle){
+        document.querySelector('.sub-menu').setAttribute('id', 'mobile-dropdown-cat')
+        document.querySelector('#arr-drp').removeAttribute('class')
+    } else {
+        document.querySelector('.sub-menu').removeAttribute('id')
+        document.querySelector('#arr-drp').setAttribute('class', 'arr-ann')
+    }
+    toggle = !toggle;
+} )
+
+document.querySelector('#arr-drp').removeAttribute('class')

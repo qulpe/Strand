@@ -7,7 +7,6 @@ function theme_enqueue_styles() {
     wp_enqueue_style( 'strande', get_stylesheet_directory_uri() . '/page-styles/style-stranded.css' );
     wp_enqueue_style( 'faq', get_stylesheet_directory_uri() . '/page-styles/style-faq.css' );
     wp_enqueue_style( 'kontakt', get_stylesheet_directory_uri() . '/page-styles/style-kontakt.css' );
-    wp_enqueue_style( 'load-animation', get_stylesheet_directory_uri() . '/loading-animation/load-animation.css' );
 }
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles', 999 );
 
@@ -86,18 +85,18 @@ function register_sidebars_init()
         'before_title' => '<h3 class="widget-title">',
         'after_title' => '</h3>',
     ));
+    register_sidebar(array(
+        'name' => 'Navbar logo',
+        'id' => 'navbar-logo',
+        'description' => 'Appears in the footer area',
+        'before_widget' => '<aside id="%1$s" class="widget %2$s">',
+        'after_widget' => '</aside>',
+        'before_title' => '<h3 class="widget-title">',
+        'after_title' => '</h3>',
+    ));
 }
 
 add_action("widgets_init", "register_sidebars_init");
-
-// $_SESSION['loadAnimation'] = include_once('load-animation.php');
-
-
-// if(is_page('hjem')) {
-//     echo $_SESSION['loadAnimation'];
-// }else{
-//     $_SESSION['loadAnimation'] = NULL;
-// }
 
 function twentytwelve_setup() {
     add_theme_support('post-thumbnails');

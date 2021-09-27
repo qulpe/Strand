@@ -10,9 +10,6 @@
     width: 250px;
 }
 
-#download-button{
-    width: 100px;
-}
 
 #hero-container{
     width: 60vw;
@@ -88,6 +85,19 @@
     #updated-hero{
         left: 0;
     }
+    #home-mid{
+        flex-direction: column !important;
+        gap: 0 !important;
+    }
+    #home-mid-l{
+        width: 100% !important;
+    }
+    #phone{
+        display: none !important;
+    }
+    #download-button{
+        width: 100%;
+    }
 }
 
 .cover{
@@ -118,4 +128,16 @@
 
 #home-hero{
     place-items: unset;
+}
+
+#home-mid{
+    display: flex;
+    gap: 10vw;
+}
+
+#home-mid-l{
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
 }

@@ -6,8 +6,6 @@
 
 get_header(); ?>
 
-
-
 <?php
 if (have_posts()) : ?>
     <li class="list-item">
@@ -37,11 +35,9 @@ if (have_posts()) : ?>
 
 else : ?>
     <p>Sorry, no posts matched your criteria.</p>
-
-
 <?php endif; ?>
-
-
-
+<script>
+    <?php include('stranded.js'); ?>
+</script>
 
 <?php get_footer(); ?>

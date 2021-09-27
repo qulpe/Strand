@@ -4,7 +4,7 @@
 
 <nav class="navigation-desktop">
     <a href="/stranddetektor/hjem">
-        <div id="logo"></div>
+        <div id="logo"><?php dynamic_sidebar('navbar-logo') ?></div>
     </a>
 
     <?php
@@ -48,6 +48,26 @@
     </ul>
 
 </div>
+
+<?php 
+
+    if(!is_page('stranded')){
+        echo '<style>
+        .menu-category + .menu-mobile-item{
+            display: none !important;
+        }
+        </style>';
+    }
+    if( is_category()){
+        echo '<style>
+        .menu-category + .menu-mobile-item{
+            display: block !important;
+        }
+        </style>';
+    }
+
+?>
+
 <script async>
     <?php include('nav.js') ?>
 </script>

@@ -1,57 +1,96 @@
 #page-kontakt{
-    height: 100vh;
-    width: 100%;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
-    padding: 10% 0 0 0;
+    /* display: grid;
+    grid-template-rows: 1fr 1fr; */
+    place-items: start;
+    padding: 0 0 0 20% !important;
 }
 
-input[type="text"],input[type="email"],textarea{
+input[type="text"], input[type="email"], textarea {
     padding: 10px 5px;
     border: 0;
     resize: none;
     border-radius: 5px;
+    width: 350px;
 }
 
-#contact-info{
-    padding-top: 5vh;
+#contact-info {
     width: 50%;
     height: fit-content;
-    position: absolute;
-
+    /* position: relative;
+    left: 20%;
+    top: 15vh; */
 }
 
-#contact-form{
+#contact-form {
+    /* position: relative;
+    left: 20%; */
     background: #00000020;
     display: flex;
+    justify-content: start;
+    gap: 16.2vw;
     height: fit-content;
     width: 100vw;
-    margin-top: 30vh;
     padding: 5%;
+    overflow: hidden;
 }
 
-#contact-title{
-    display: grid;
+#contact-title-mobile {
+    display: none;
+    text-align: start !important;
+}
+
+#contact-title {
     place-items: center;
-    width: 50%;
     height: 100%;
+    width: 50%;
+    text-align: start !important;
+    padding: 0 40% 0 0;
+    /* position: absolute;
+    right: 20vw; */
 }
 
-@media (max-width: 767px){
-    #page-kontakt{
-        grid-template-columns: 1fr !important;
-    }
-
-    input[type="text"],input[type="email"],textarea{
-        width: 70vw;
-    }
- 
+#contact-info h1{
+    font-size: 33px !important;
+    padding: 0 20% 0 0;
+    white-space: break-spaces;
 }
 
-#kontakt{
+@media (max-width: 767px) {
+    #page-kontakt {
+       grid-template-columns: 1fr !important;
+       padding: 0 5% !important;
+    }
+    input[type="text"], input[type="email"], textarea {
+        width: 85%;
+    }
+    #contact-form {
+        gap: 0 !important;
+        left: 0;
+        display: grid;
+        grid-template-columns: 1fr;
+        margin-left: -5%;
+    }
+    #contact-title{
+        display: none !important;
+        
+    }
+    #contact-title-mobile {
+        display: block !important;
+        padding: 0 26% 0 0 !important;
+    }
+    #contact-title-mobile h1{
+        margin: 0;
+    }
+}
+
+#kontakt {
     width: 500px;
-    height: 500px; 
+    height: 500px;
     background: #000;
     z-index: 999999999999999999999999999999999999;
 }
+
+@media (max-width: 885px){
+
+}
+

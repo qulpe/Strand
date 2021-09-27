@@ -146,7 +146,7 @@ if (have_posts()) :
 
         <script>
             <?php
-            if (is_page('faq')) {
+            if (is_page('faq-en')) {
                 include('faq-drp.js');
             }
             ?>

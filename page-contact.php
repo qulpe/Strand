@@ -34,7 +34,7 @@ if (have_posts()) :
 
     <?php 
     
-    if(is_page('kontakt')){
+    if(is_page('contact')){
         echo '<style>
         @media (max-width: 420px){
              p{
